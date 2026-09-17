@@ -1,0 +1,10 @@
+[
+  {
+    "name": "LN R007 16S",
+    "file": "data/LN_R007_16S.tsv"
+  },
+  {
+    "name": "Example (aggregation check)",
+    "file": "data/example_small.tsv"
+  }
+]

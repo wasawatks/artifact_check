@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Otter diet metabarcoding viewer</title>
+  <meta name="description" content="Read composition by label for otter diet metabarcoding datasets.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦦</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Relative paths only: works under https://USERNAME.github.io/REPOSITORY/ -->
+  <!-- Bump ?v= when you change style.css or app.js so browsers fetch the new copy. -->
+  <link rel="stylesheet" href="style.css?v=1">
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js" charset="utf-8" defer></script>
+  <script src="app.js?v=1" defer></script>
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar" aria-label="Datasets">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">🦦</span>
+        <div>
+          <p class="brand-title">Otter diet</p>
+          <p class="brand-sub">Metabarcoding read composition</p>
+        </div>
+      </div>
+      <h2 class="sidebar-heading">Datasets</h2>
+      <nav id="dataset-list" class="dataset-list">
+        <p class="sidebar-status">Loading dataset list…</p>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <header class="dataset-header">
+        <h1 id="dataset-title">Select a dataset</h1>
+        <dl id="dataset-stats" class="stats" hidden></dl>
+        <div id="ribbon-wrap" class="ribbon-wrap" hidden>
+          <div id="ribbon" class="ribbon" role="img" aria-label="Pooled read composition across all samples"></div>
+          <p class="ribbon-caption">All samples pooled</p>
+        </div>
+      </header>
+
+      <div class="tabs" role="tablist" aria-label="View">
+        <button type="button" role="tab" id="tab-plot" class="tab" aria-selected="true" aria-controls="panel-plot" data-view="plot">Plot</button>
+        <button type="button" role="tab" id="tab-table" class="tab" aria-selected="false" aria-controls="panel-table" data-view="table" tabindex="-1">Table</button>
+      </div>
+
+      <details id="notices" class="notices" hidden>
+        <summary id="notices-summary"></summary>
+        <ul id="notices-list"></ul>
+      </details>
+
+      <div id="status" class="status" role="status" aria-live="polite"></div>
+
+      <section id="panel-plot" class="panel" role="tabpanel" aria-labelledby="tab-plot">
+        <p class="panel-hint">Each bar is one sample, scaled to 100% of its reads. Scroll sideways when there are many samples. Select a label below to hide or show it.</p>
+        <div id="plot-scroll" class="plot-scroll">
+          <div id="plot"></div>
+        </div>
+        <div id="legend" class="legend" aria-label="Labels"></div>
+      </section>
+
+      <section id="panel-table" class="panel" role="tabpanel" aria-labelledby="tab-table" hidden>
+        <div class="table-toolbar">
+          <label class="field">
+            <span>Search taxon or label</span>
+            <input id="table-search" type="search" placeholder="e.g. Anabas, Prey - Fish" autocomplete="off">
+          </label>
+          <label class="field">
+            <span>Label</span>
+            <select id="table-label"><option value="">All labels</option></select>
+          </label>
+          <p id="table-count" class="table-count"></p>
+        </div>
+        <div class="table-scroll" id="table-scroll">
+          <table id="data-table" class="data-table">
+            <thead></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <button type="button" id="table-more" class="more-btn" hidden>Show more rows</button>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
