@@ -1,10 +1,14 @@
 [
   {
-    "name": "LN R007 16S",
-    "file": "data/LN_R007_16S.tsv"
+    "name": "LN.R007 * 12SV5",
+    "file": "data/LN_R007_12SV5.tsv"
   },
   {
-    "name": "Example (aggregation check)",
-    "file": "data/example_small.tsv"
+    "name": "LN.R007 - Vert16S",
+    "file": "data/LN_R007_Vert16S.tsv"
+  },
+  {
+    "name": "LN.R007 - fwh2",
+    "file": "data/LN_R007_fwh2.tsv"
   }
 ]
