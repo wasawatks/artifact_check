@@ -8,6 +8,10 @@
     "file": "data/LN_R007_Vert16S.tsv"
   },
   {
+    "name": "LN.R007 - mlCOIint",
+    "file": "data/LN_R007_mlCOIint.tsv"
+  },
+  {
     "name": "LN.R007 - fwh2",
     "file": "data/LN_R007_fwh2.tsv"
   }
