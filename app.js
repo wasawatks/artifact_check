@@ -751,28 +751,39 @@
         if (state.hidden.has(g.name)) state.hidden.delete(g.name); else state.hidden.add(g.name);
         b.setAttribute('aria-pressed', state.hidden.has(g.name) ? 'false' : 'true');
         Plotly.restyle($('plot'), { visible: state.hidden.has(g.name) ? 'legendonly' : true }, [i]);
-        updateLegendReset();
+        updateLegendButtons();
       });
       box.appendChild(b);
     });
-    var reset = document.createElement('button');
-    reset.type = 'button';
-    reset.className = 'legend-reset';
-    reset.id = 'legend-reset';
-    reset.textContent = 'Show all labels';
-    reset.addEventListener('click', function () {
-      state.hidden.clear();
-      Plotly.restyle($('plot'), { visible: true });
-      box.querySelectorAll('.legend-item').forEach(function (b) { b.setAttribute('aria-pressed', 'true'); });
-      updateLegendReset();
-    });
-    box.appendChild(reset);
-    updateLegendReset();
+    box.appendChild(bulkButton('legend-show-all', 'Show all labels', false));
+    box.appendChild(bulkButton('legend-hide-all', 'Hide all labels', true));
+    updateLegendButtons();
   }
 
-  function updateLegendReset() {
-    var r = $('legend-reset');
-    if (r) r.hidden = state.hidden.size === 0;
+  /** "Show all labels" / "Hide all labels" */
+  function bulkButton(id, text, hide) {
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'legend-reset';
+    b.id = id;
+    b.textContent = text;
+    b.addEventListener('click', function () {
+      state.hidden = new Set(hide ? state.current.agg.labels.map(function (g) { return g.name; }) : []);
+      Plotly.restyle($('plot'), { visible: hide ? 'legendonly' : true });
+      $('legend').querySelectorAll('.legend-item').forEach(function (item) {
+        item.setAttribute('aria-pressed', hide ? 'false' : 'true');
+      });
+      updateLegendButtons();
+    });
+    return b;
+  }
+
+  function updateLegendButtons() {
+    var total = state.current ? state.current.agg.labels.length : 0;
+    var show = $('legend-show-all');
+    var hide = $('legend-hide-all');
+    if (show) show.hidden = state.hidden.size === 0;       // nothing hidden yet
+    if (hide) hide.hidden = state.hidden.size >= total;     // everything already hidden
   }
 
   // ---------- Table (original rows) ----------

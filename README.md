@@ -40,6 +40,10 @@ For each dataset, all `Final_taxon` rows with the same `Label` are merged:
 
 Samples with 0 total reads show an empty bar marked "no reads". The Table tab always shows the original rows, not the merged values. `data/example_small.tsv` reproduces the worked example: Sample1 is 75.10% No Hit and 24.90% Prey - Fish.
 
+## Legend
+
+Clicking a legend entry hides or shows that label. "Hide all labels" clears the plot so you can switch labels back on one at a time; "Show all labels" brings everything back. Bars keep each label's real share of the sample's reads, so with labels hidden the bars no longer reach 100%.
+
 ## Add a new dataset
 
 1. Copy the file into `data/`, e.g. `data/12S_OBS1_Blocker.tsv`.
