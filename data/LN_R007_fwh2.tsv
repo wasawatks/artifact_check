@@ -1,4 +1,4 @@
-Final_taxon	Label	Total_ASVs	LNHKK53_fwh2	LNHKK55_fwh2	LNHKK56_fwh2	LNKWC07_fwh2	LNKWC08_fwh2	LNKWC09_fwh2	LNKWC13_fwh2	LNKWC15_fwh2	LNKWC16_fwh2	LNMAW17_fwh2	Total_read
+Final_taxon	Label	Total_ASVs	LNHKK53 (AC)	LNHKK55 (AC)	LNHKK56 (AC)	LNKWC07 (AC)	LNKWC08 (AC)	LNKWC09 (AC)	LNKWC13 (AC)	LNKWC15 (AC)	LNKWC16 (AC)	LNMAW17 (AC)	Total_read
 No Hit	No Hit	2989	59425	8228	82699	133077	146073	49814	108064	36559	20888	3022	647849
 p__Chordata;c__Mammalia;o__Carnivora;f__Mustelidae	Artifact (Carnivora) - Mustelidae	1	0	0	0	0	0	0	3	0	0	0	3
 p__Chordata;c__Amphibia;o__Anura;f__Megophryidae	Prey - Amphibian	1	0	0	13	0	0	0	0	0	0	0	13

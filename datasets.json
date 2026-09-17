@@ -1,10 +1,10 @@
 [
   {
-    "name": "LN.R007 - 12SV5",
+    "name": "LN.R007 - 12SV5 (OBS1)",
     "file": "data/LN_R007_12SV5.tsv"
   },
   {
-    "name": "LN.R007 - Vert16S",
+    "name": "LN.R007 - Vert16S (16S.LN.Blk4)",
     "file": "data/LN_R007_Vert16S.tsv"
   },
   {
