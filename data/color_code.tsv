@@ -1,26 +1,25 @@
 Label	Color_code
-Artifact  (Primates)	#7C064D
-Artifact  (Primates) - Human	#7C064D
-Artifact - Artiodactyla	#FF2DD1
-Artifact - Chiroptera	#A2AF9B
-Artifact - Rodent	#DEE791
-Artifact (Carnivora)	#F65C78
-Artifact (Carnivora) - Cuon alpinus	#F65C78
-Artifact (Carnivora) - Lutra sp.	#F65C78
-Artifact (Carnivora) - Martes sp.	#F65C78
-Artifact (Carnivora) - Mustelidae	#F65C78
-Artifact (Carnivora) - Paguma larvata	#F65C78
-Artifact (Carnivora) - Panthera leo	#F65C78
-Artifact (Carnivora) - Paradoxurus	#F65C78
-Artifact (Carnivora) - Paradoxurus hermaphroditus	#F65C78
-Artifact (Carnivora) - Prionailurus bengalensis	#F65C78
-Artifact (Carnivora) - Prionailurus sp.	#F65C78
-Artifact (Carnivora) - Viverra zibetha	#F65C78
-Host - AC	#D90000
-Host - LL	#D90000
-Host - LP	#D90000
-No Hit	#D2C4B4
-Prey - Amphibia	#F4F754
-Prey - Aves	#F4F754
-Prey - Fish	#F4F754
-Prey - Reptile	#F4F754
+Host - AC	#FFEA88
+Host - LL	#66A3BF
+Host - LP	#7DCCAD
+No Hit	#000000
+Artifact  - Primates	#D51C39
+Artifact  (Mammal) - Elephas maximus	#D51C39
+Artifact - Artiodactyla	#D51C39
+Artifact - Chiroptera	#D51C39
+Artifact - Rodent	#D51C39
+Artifact (Carnivora)	#D51C39
+Artifact (Carnivora) - Aonyx sp.	#D51C39
+Artifact (Carnivora) - Lutra sp.	#D51C39
+Artifact (Carnivora) - Lutrogale sp.	#D51C39
+Artifact (Carnivora) - Mustelidae	#D51C39
+Artifact (Carnivora) - Paradoxurus hermaphroditus	#D51C39
+Artifact (Carnivora) - Paradoxurus sp.	#D51C39
+Artifact (Carnivora) - Viverridae	#D51C39
+Prey - Amphibian	#A2CB8B
+Prey - Aves	#E5BA41
+Prey - Fish	#5A9CB5
+Prey - Insect	#FDACAC
+Prey - Malacostraca	#AF3E3E
+Prey - Mollusk	#7F55B1
+Prey - Reptile	#D1A980
